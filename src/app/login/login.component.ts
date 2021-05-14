@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   password!: string;
   ngOnInit(): void { }
   login(): void {
-    //Token mesaj kismi
+    // token message part
     this.authService
       .login(this.username, this.password)
       .subscribe(({ data, message }) => {
