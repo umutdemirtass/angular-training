@@ -15,19 +15,19 @@ export class JwtTokenInterceptor implements HttpInterceptor {
   constructor() { }
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    // request url iceriyor mu sorgusu
+    // Url check
     if (!request.url.includes('/connect/token')) {
       const token = localStorage.getItem('token');
-      // request kopyalama
+      // request cloning
       const modified = request.clone({
         setHeaders: {
           Authorization: 'Bearer ' + token
         }
       });
-      // clone requesti devam ettir
+      // clone request contiune
       return next.handle(modified);
     }
-    // requesti devam ettir 
+    // main request contiune  
     return next.handle(request);
   }
 }
