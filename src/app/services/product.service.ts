@@ -9,11 +9,11 @@ export class ProductService {
   path3 = 'https://count-book-on-premises-inventory-service-dev.azurewebsites.net/api/v1/Item/GetItem/';
   constructor(private http: HttpClient) { }
 
-  // Ana ekran
+  // Main Page
   getProducts(): Observable<any> {
     return this.http.get(this.path + '0');
   }
-  // Item detaylari
+  // Item Details
   getItemDetails(id: number): Observable<any> {
     return this.http.get(this.path3 + id);
   }
