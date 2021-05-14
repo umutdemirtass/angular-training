@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUrl: 'https://count-book-on-premises-auth-service-dev.azurewebsites.net'
 };

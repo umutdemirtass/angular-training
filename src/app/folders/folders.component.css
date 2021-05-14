@@ -1,0 +1,16 @@
+.example-card {
+    max-width: 300px;
+  }
+  
+  .example-header-image {
+    background-image: url('../../assets/ccc.jpeg');
+    background-size: cover;
+  }
+  .wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+  }
+  .btn{
+    background-color: rgb(197, 233, 149);
+}
